@@ -11,9 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Hello world action step
-        uses: . # Uses an action in the root directory
+        uses: ./ # Uses an action in the root directory
         id: hello
         with:
+          context: .
           who-to-greet: 'Wanlu and Xiaogouji'
       # Use the output from the `hello` step
       - name: Get the output time
