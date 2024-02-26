@@ -17,6 +17,8 @@
 #       # Use the output from the `hello` step
 #       - name: Get the output time
 #         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+# public actions
 on: [push]
 
 jobs:
@@ -28,7 +30,7 @@ jobs:
         id: hello
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Wanlu and Xiaogouji'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
